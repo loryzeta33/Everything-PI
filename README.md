@@ -1,6 +1,6 @@
 # Everything-PI
 
-Everything-PI is a script which let you search in the PI value a number or a text (its related ASCII code).
+Everything-PI is a funny script which let you search in the PI value a number or a text (its related ASCII code).
 
 
 ## Pi value
