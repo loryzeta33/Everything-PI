@@ -15,6 +15,10 @@ The script also works with the first file, but if you want a better search you c
 
 The script works just with the first file, but if you want a better search you can dowload the second.
 
+### Use other value
+
+If you want, you can use a custom `.txt` file: just put it in the `PI values` directory and change its name in `pi_dec_custom.txt` (then the script will automatically use it).
+
 ### References
 
 All values are downloaded from: https://pi2e.ch/blog/2017/03/10/pi-digits-download/
