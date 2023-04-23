@@ -11,9 +11,13 @@ The PI value is stored in 2 file:
 The ZIP contains 2 file, put the `PI - Dec.txt` file in the `Pi values` folder, then change the name to `pi_dec_1b.txt` (the script will automatically use it).
 
 The script also works with the first file, but if you want a better search you can download and use the second file.
-(This choise let you try and use the script without download 1 GB of file, in case you don't have a good connection).
+(This choice let you try and use the script without download 1 GB of file, in case you don't have a good connection).
 
 The script works just with the first file, but if you want a better search you can dowload the second.
+
+### References
+
+All values are downloaded from: https://pi2e.ch/blog/2017/03/10/pi-digits-download/
 
 ## How to use
 
