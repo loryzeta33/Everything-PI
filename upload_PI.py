@@ -4,7 +4,7 @@
 
 PI_dec_1m_file_name = 'PI values/pi_dec_1m.txt'
 PI_dec_1t_file_name = 'PI values/pi_dec_1b.txt'
-PI_dec_custom_file_name = 'PI values/_pi_dec_custom.txt'
+PI_dec_custom_file_name = 'PI values/pi_dec_custom.txt'
 
 def upload_PI():
     try:
