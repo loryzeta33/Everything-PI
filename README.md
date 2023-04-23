@@ -23,4 +23,6 @@ All values are downloaded from: https://pi2e.ch/blog/2017/03/10/pi-digits-downlo
 
 Just run the `main.py` file and type what you want to search.
 
+It returns where the number or the text was found and the relative index.
+
 <img width="418" alt="image" src="https://user-images.githubusercontent.com/73521240/233862094-e5e9d992-773c-4b51-bf90-b1e56c7f21e5.png">
