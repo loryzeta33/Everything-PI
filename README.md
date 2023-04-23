@@ -13,8 +13,6 @@ The ZIP contains 2 file, put the `PI - Dec.txt` file in the `Pi values` folder, 
 The script also works with the first file, but if you want a better search you can download and use the second file.
 (This choice let you try and use the script without download 1 GB of file, in case you don't have a good connection).
 
-The script works just with the first file, but if you want a better search you can dowload the second.
-
 ### Use other value
 
 If you want, you can use a custom `.txt` file: just put it in the `PI values` directory and change its name in `pi_dec_custom.txt` (then the script will automatically use it).
