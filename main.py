@@ -1,4 +1,4 @@
-# With this script you can find a number or a word (its relativa ASCII code) in the PI value
+# With this script you can find a number or a word (its relative ASCII code) in the PI value
 
 from colorama import Fore
 
