@@ -1,5 +1,7 @@
 # Upload PI value
 
+# PI values site: https://pi2e.ch/blog/2017/03/10/pi-digits-download/
+
 PI_dec_1m_file_name = 'PI values/pi_dec_1m.txt'
 PI_dec_1t_file_name = 'PI values/pi_dec_1b.txt'
 

@@ -1,7 +1,5 @@
 # With this script you can find a number or a word (its relativa ASCII code) in the PI value
 
-# PI values site: https://pi2e.ch/blog/2017/03/10/pi-digits-download/
-
 from colorama import Fore
 
 from upload_PI import upload_PI
