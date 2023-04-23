@@ -4,13 +4,18 @@
 
 PI_dec_1m_file_name = 'PI values/pi_dec_1m.txt'
 PI_dec_1t_file_name = 'PI values/pi_dec_1b.txt'
+PI_dec_custom_file_name = 'PI values/_pi_dec_custom.txt'
 
 def upload_PI():
     try:
-        with open(PI_dec_1t_file_name, 'r') as file:
+        with open(PI_dec_custom_file_name, 'r') as file:
             text = file.read()
     except:
-        with open(PI_dec_1m_file_name, 'r') as file:
-            text = file.read()
+        try:
+            with open(PI_dec_1t_file_name, 'r') as file:
+                text = file.read()
+        except:
+            with open(PI_dec_1m_file_name, 'r') as file:
+                text = file.read()
     
     return text
