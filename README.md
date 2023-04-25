@@ -1,6 +1,6 @@
 # Everything-PI
 
-Everything-PI is a script which let you search in the PI value a number or a text (its related ASCII code).
+Everything-PI is a funny script which let you search in the PI value a number or a text (its related ASCII code).
 
 
 ## Pi value
@@ -12,8 +12,6 @@ The ZIP contains 2 file, put the `PI - Dec.txt` file in the `Pi values` folder, 
 
 The script also works with the first file, but if you want a better search you can download and use the second file.
 (This choice let you try and use the script without download 1 GB of file, in case you don't have a good connection).
-
-The script works just with the first file, but if you want a better search you can dowload the second.
 
 ### Use other value
 
