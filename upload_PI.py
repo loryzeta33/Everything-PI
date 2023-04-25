@@ -15,7 +15,11 @@ def upload_PI():
             with open(PI_dec_1t_file_name, 'r') as file:
                 text = file.read()
         except:
-            with open(PI_dec_1m_file_name, 'r') as file:
-                text = file.read()
+            try:
+                with open(PI_dec_1m_file_name, 'r') as file:
+                    text = file.read()
+            except:
+                print("Error. No file wos found in the \"PI values\" folder. Please check there is a file with the PI value.")
+                return -1, ''
     
-    return text
+    return 0, text
