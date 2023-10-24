@@ -28,3 +28,8 @@ Just run the `main.py` file and type what you want to search.
 It returns where the number or the text was found and the relative index.
 
 <img width="418" alt="image" src="https://user-images.githubusercontent.com/73521240/233862094-e5e9d992-773c-4b51-bf90-b1e56c7f21e5.png">
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for the full details.
+
