@@ -1,46 +1,45 @@
 from colorama import Fore
 
-def print_text(PI_value: str, start_index: int, end_index: int, text_array: tuple[str]):
-    for index in range(0,25):
-        print(PI_value[index], end='')
-    
-    print(' ... ', end='')
 
-    for index in range(start_index-10,start_index):
-        print(PI_value[index], end='')
-    print(' ', end='')
+FIRST_DIGITS = 25
+LATERAL_DIGITS = 10
 
+
+def _get_prefix_and_suffix(pi_value: str, start_index: int, end_index: int):
+    return pi_value[0:FIRST_DIGITS] + " ... " + pi_value[start_index-LATERAL_DIGITS:start_index] + " ", pi_value[end_index+1:end_index+LATERAL_DIGITS+1] + "..."
+
+def print_text(pi_value: str, start_index: int, end_index: int, text_array: tuple[str]):
+    prefix, suffix = _get_prefix_and_suffix(pi_value, start_index, end_index)
+
+    if start_index < FIRST_DIGITS:
+        prefix = pi_value[0:start_index] + " "
+
+    if end_index >= len(pi_value)-LATERAL_DIGITS-1:
+        suffix = pi_value[end_index+1:]
+
+    pi_string = ""
     for code in text_array:
-        print(Fore.MAGENTA + code + ' ', end='')
-    print(Fore.RESET + '', end='')
-    
-    for index in range(end_index+1,end_index+11):
-        print(PI_value[index], end='')
-    
-    print('...')
+        pi_string += Fore.MAGENTA + code + " "
+    pi_string += Fore.RESET
+
+    print(prefix + pi_string + suffix)
 
     print('\nFirst index: ', start_index)
     print('Last index: ', end_index)
 
 
-def print_number(PI_value: str, start_index: int, end_index: int):
-    for index in range(0,25):
-        print(PI_value[index], end='')
-    
-    print(' ... ', end='')
+def print_number(pi_value: str, start_index: int, end_index: int):
+    prefix, suffix = _get_prefix_and_suffix(pi_value, start_index, end_index)
 
-    for index in range(start_index-10,start_index):
-        print(PI_value[index], end='')
-    print(' ', end='')
+    if start_index < FIRST_DIGITS:
+        prefix = pi_value[0:start_index] + " "
 
-    for index in range(start_index,end_index+1):
-        print(Fore.MAGENTA + PI_value[index], end='')
-    print(Fore.RESET + ' ', end='')
-    
-    for index in range(end_index+1,end_index+11):
-        print(PI_value[index], end='')
-    
-    print('...')
+    if end_index >= len(pi_value)-LATERAL_DIGITS-1:
+        suffix = pi_value[end_index+1:]
+
+    pi_string = Fore.MAGENTA + pi_value[start_index:end_index+1] + Fore.RESET + " "
+
+    print(prefix + pi_string + suffix)
 
     print('\nFirst index: ', start_index)
     print('Last index: ', end_index)

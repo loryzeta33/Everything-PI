@@ -1,48 +1,49 @@
 # With this script you can find a number or a word (its relative ASCII code) in the PI value
 
-from colorama import Fore
-
-from upload_PI import upload_PI
+from upload_pi import upload_pi_value
 from text_to_ASCII import text_to_ASCII
-from find_number import find_number
+from search import search_number_in_pi
 from print_result import *
 
+
+def search_number(pi_string, number):
+    # Find number in PI
+    match_found, start_index, end_index = search_number_in_pi(pi_string, str(number))
+
+    if match_found:
+        print("Good! The number was found in PI!\n")
+        print_number(pi_string, start_index, end_index)
+    else:
+        print("Sorry. The number wasn't found in the PI value.")
+
+def search_text(pi_string, text):
+    # Convert word in ASCII code
+    ASCII_text = text_to_ASCII(text)
+
+    # Find text in PI
+    match_found, start_index, end_index = search_number_in_pi(pi_string, ASCII_text[0])
+
+    if match_found:
+        print("Good! The text was found in PI!\n")
+        print_text(pi_string, start_index, end_index, ASCII_text[1])
+    else:
+        print("Sorry. The text wasn't found in the PI value.")
+
+def main():
+    try:
+        pi_string = upload_pi_value()
+    except FileNotFoundError as e:
+        print(e)
+        return
+
+    text = str(input("What do you want to find (type a number or a text)? "))
+
+    try:
+        number = eval(text)
+        search_number(pi_string, number)
+    except Exception:
+        search_text(pi_string, text)
+
+
 if __name__ == '__main__':
-    mode = 0
-
-    # Uploading PI value
-    status, PI_dec_1m = upload_PI()
-
-    if status==0:
-        # Ask word to find
-        text = str(input("What do you want to find (type a number or a text)? "))
-
-        try:
-            number = eval(text)
-        except:
-            mode = 1
-
-        # From number
-        if mode==0:
-            # Find number in PI
-            match_found, start_index, end_index = find_number(PI_dec_1m, str(number))
-
-            if match_found:
-                print('Good! The number was found in PI!\n')
-                print_number(PI_dec_1m, start_index, end_index)
-            else:
-                print('Sorry. The number wasn\'t found in the PI value.')
-
-        # From text
-        else:
-            # Convert word in ASCII code
-            ASCII_text = text_to_ASCII(text)
-
-            # Find text in PI
-            match_found, start_index, end_index = find_number(PI_dec_1m, ASCII_text[0])
-
-            if match_found:
-                print('Good! The text was found in PI!\n')
-                print_text(PI_dec_1m, start_index, end_index, ASCII_text[1])
-            else:
-                print('Sorry. The text wasn\'t found in the PI value.')
+    main()

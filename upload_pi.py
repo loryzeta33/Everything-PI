@@ -6,7 +6,7 @@ PI_dec_1m_file_name = 'pi_values/pi_dec_1m.txt'
 PI_dec_1t_file_name = 'pi_values/pi_dec_1b.txt'
 PI_dec_custom_file_name = 'pi_values/pi_dec_custom.txt'
 
-def upload_PI():
+def upload_pi_value():
     try:
         with open(PI_dec_custom_file_name, 'r') as file:
             text = file.read()
@@ -19,7 +19,6 @@ def upload_PI():
                 with open(PI_dec_1m_file_name, 'r') as file:
                     text = file.read()
             except:
-                print("Error. No file wos found in the \"PI values\" folder. Please check there is a file with the PI value.")
-                return -1, ''
+                raise FileNotFoundError("No file was found in the \"PI values\" folder. Please check if there is a file with the PI value.")
     
-    return 0, text
+    return text
