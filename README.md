@@ -1,35 +1,65 @@
 # Everything-PI
 
-Everything-PI is a funny script which let you search in the PI value a number or a text (its related ASCII code).
-
+Everything-PI is a fun script that lets you search for a number or text (converted into its ASCII code) inside the digits of π.
 
 ## Pi value
 
-The PI value is stored in 2 file:
-- the first contains the value with 1 million places and it's already in the repository `pi_dec_1m.txt`
-- the second contains the value with 1 billion places and it's not in the repository because its dimension is 1 GB; you can download it at https://archive.org/download/Math_Constants/Pi.zip.
-The ZIP contains 2 file, put the `PI - Dec.txt` file in the `Pi values` folder, then change the name to `pi_dec_1b.txt` (the script will automatically use it).
+The digits of π are stored in text files:
+ - pi_dec_1m.txt → first **1 million** digits (already in the repository).
+ - pi_dec_1b.txt → first **1 billion** digits (≈1 GB, not included).
+<br>You can download it from [archive.org](https://archive.org/download/Math_Constants/Pi.zip).
+<br>Extract the file `PI - Dec.txt` into the `pi_values/` folder and rename it to `pi_dec_1b.txt`.
 
-The script also works with the first file, but if you want a better search you can download and use the second file.
-(This choice let you try and use the script without download 1 GB of file, in case you don't have a good connection).
+The script will automatically pick the largest available file.
 
-### Use other value
+### Use a custom value
 
-If you want, you can use a custom `.txt` file: just put it in the `PI values` directory and change its name in `pi_dec_custom.txt` (then the script will automatically use it).
+You can also use your own `.txt` file:
+ - put it in the `pi_values/` directory
+ - rename it `pi_dec_custom.txt`
+ - the script will load it automatically.
+
+### File priority
+
+If multiple files are present in the pi_values/ directory, the script will automatically select one according to the following priority:
+ 1.	`pi_dec_custom.txt` (custom file)
+ 2.	`pi_dec_1b.txt` (1 billion digits)
+ 3.	`pi_dec_1m.txt` (1 million digits, default)
 
 ### References
 
-All values are downloaded from: https://pi2e.ch/blog/2017/03/10/pi-digits-download/
+Digits are taken from: [pi2e.ch](https://pi2e.ch/blog/2017/03/10/pi-digits-download/)
+
+---
 
 ## How to use
 
-Just run the `main.py` file and type what you want to search.
+Clone the repository and install dependencies:
 
-It returns where the number or the text was found and the relative index.
+```bash
+git clone https://github.com/loryzeta33/Everything-PI.git
+cd Everything-PI
+pip install -r requirements.txt
+```
+
+Run the main script:
+
+```bash
+python main.py
+```
+
+### Example
 
 <img width="418" alt="image" src="https://user-images.githubusercontent.com/73521240/233862094-e5e9d992-773c-4b51-bf90-b1e56c7f21e5.png">
 
+---
+
+## Requirements
+
+See [requirements.txt](requirements.txt) for the full list.
+
+---
+
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for the full details.
-
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
