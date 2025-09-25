@@ -1,7 +1,7 @@
 # With this script you can find a number or a word (its relative ASCII code) in the PI value
 
 from upload_pi import upload_pi_value
-from text_to_ASCII import text_to_ASCII
+from utils.text_to_ASCII import text_to_ASCII
 from search import search_number_in_pi
 from print_result import *
 
@@ -31,12 +31,13 @@ def search_text(pi_string, text):
 
 def main():
     try:
-        pi_string = upload_pi_value()
+        pi_string, file = upload_pi_value()
+        print(f"'{file}' pi value uploaded.")
     except FileNotFoundError as e:
         print(e)
         return
 
-    text = str(input("What do you want to find (type a number or a text)? "))
+    text = str(input("\nWhat do you want to find (type a number or a text)? "))
 
     try:
         number = eval(text)
