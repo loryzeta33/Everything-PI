@@ -5,12 +5,18 @@ Everything-PI is a fun script that lets you search for a number or text (convert
 ## Pi value
 
 The digits of π are stored in text files:
- - pi_dec_1m.txt → first **1 million** digits (already in the repository).
- - pi_dec_1b.txt → first **1 billion** digits (≈1 GB, not included).
-<br>You can download it from [archive.org](https://archive.org/download/Math_Constants/Pi.zip).
-<br>Extract the file `PI - Dec.txt` into the `pi_values/` folder and rename it to `pi_dec_1b.txt`.
+ - `pi_dec_1m.txt` → first **1 million** digits (already in the repository).
+ - `pi_dec_1b.txt` → first **1 billion** digits (≈1 GB, not included).
 
-The script will automatically pick the largest available file.
+### Download 1 billion digits
+
+#### Automatically
+
+You can download the `pi_dec_1b.txt` file automatically by running `download.py`.
+
+#### Manually
+
+You can also manually download it from [archive.org](https://archive.org/download/Math_Constants/Pi.zip), extract the file `PI - Dec.txt` into the `pi_values/` folder and rename it to `pi_dec_1b.txt`.
 
 ### Use a custom value
 
